@@ -1,11 +1,8 @@
-terraform {
-   backend "remote" {
-    hostname = "app.terraform.io"
-    organization = "test-organization"
-
-    workspaces {
-      prefix = "prefix-"
-    }
+ terraform {
+  backend "s3" {
+    bucket = "mybucket"
+    key    = "path/to/my/key"
+    region = "us-east-1"
   }
 }
 
