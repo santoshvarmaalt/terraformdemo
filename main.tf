@@ -1,8 +1,10 @@
 terraform {
-  required_providers {
-    aws = {
-      source = "hashicorp/aws"
-      version = "4.48.0"
+   backend "remote" {
+    hostname = "app.terraform.io"
+    organization = "test-organization"
+
+    workspaces {
+      prefix = "prefix-"
     }
   }
 }
