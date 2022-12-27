@@ -1,7 +1,7 @@
  terraform {
   backend "s3" {
     bucket = "tfstate4532"
-    key    = "path/to/my/key"
+    key    = "path/key"
     region = "us-east-1"
    access_key = "AKIATC54J5OCI7CSV4JC"
    secret_key = "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"
@@ -41,7 +41,7 @@ resource "aws_network_interface" "foo" {
 }
 
 resource "aws_instance" "foo" {
-  ami           = "ami-0b5eea76982371e91" # us-west-2
+  ami           = "ami-005e54dee72cc1d00"#"ami-0b5eea76982371e91" # us-west-2
   instance_type = "t2.micro"
 
   network_interface {
