@@ -1,8 +1,10 @@
  terraform {
   backend "s3" {
-    bucket = "mybucket"
+    bucket = "tfstate4532"
     key    = "path/to/my/key"
     region = "us-east-1"
+   access_key = "AKIATC54J5OCI7CSV4JC"
+   secret_key = "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"
   }
 }
 
